@@ -13,8 +13,10 @@ import koreanize_matplotlib
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv()  # .env에 있는 환경변수를 읽어옴 -> 맨 앞줄에 작성
+
 my_name = os.getenv('MY_NAME', '사용자')
+st.header(my_name)
 
 def get_krx_company_list() -> pd.DataFrame:
     try:
