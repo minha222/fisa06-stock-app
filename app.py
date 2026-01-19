@@ -10,6 +10,11 @@ import pandas as pd
 import FinanceDataReader as fdr
 import matplotlib.pyplot as plt
 import koreanize_matplotlib
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+my_name = os.getenv('MY_NAME', '사용자')
 
 def get_krx_company_list() -> pd.DataFrame:
     try:
